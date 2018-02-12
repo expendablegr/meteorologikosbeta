@@ -1,0 +1,62 @@
+<html>
+<head>
+<style>
+table , th , td{
+ border-collapse:collapse;
+ border: 1px solid black;}
+</style>
+<meta charset="UTF-8">
+<title>Μετέο Μεσσαράς</title>
+</head>
+<body bgcolor=>
+<h1>Δεδομένα Μετεορολογικού</h1>
+ <?php
+$servername = "localhost";
+$username = "meteo17";
+$password = "meteo17";
+$dbname = "gp_2017_2018";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT temp FROM meteorologikos";
+$result = $conn->query($sql);
+
+echo "<p>";
+echo $result->num_rows;
+echo "</p>";
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        echo "id: " . $row["temp"]. "<br>";
+    }
+} else {
+    echo "0 results";
+}
+$conn->close();
+?>
+
+<table>
+<tr>
+<th><img src="https://i.imgur.com/o121blp.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/0yGO1EZ.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/pcRwVTJ.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/s5NCaj9.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/81guYEI.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/YPvFopV.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/PaSe2ba.png" style="width:50px; height:50"></th>
+<th><img src="https://i.imgur.com/WRJywFJ.png" style="width:50px; height:50"></th>
+</tr>
+<tr>
+<td>tzatzo</td>
+<td>xazizi</td>
+</tr>
+</table>
+</body>
+</html>
+
