@@ -1,0 +1,65 @@
+body {
+    background: #eee;
+    font-style: :arial, sans-serif ;
+    margin:0;
+    padding:10;
+0}
+
+
+#nav {
+    float:left;
+    margin: 0;
+    padding: 0;
+    border: lpx solid white;
+    border-bottom: none;
+    
+}
+#nav li, #nav li a{
+    float: left;
+    
+}
+#nav li{
+    list-style: none;
+    position: relative;
+}
+#nav li a{
+    padding: 14px 28px;
+    text-decoration: none;
+    color: white;
+    background: #1e5799;
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 6%, #207cca 26%, #1e5799 98%, #7db9e8 100%); 
+    background: -webkit-linear-gradient(top, #1e5799 0%,#2989d8 6%,#207cca 26%,#1e5799 98%,#7db9e8 100%);
+    background: linear-gradient(to bottom, #1e5799 0%,#2989d8 6%,#207cca 26%,#1e5799 98%,#7db9e8 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+    
+    border-right: 1px solid #1e5799;
+    border-left: 1px solid #2989d8;
+    border-bottom: 1px solid #232323;
+}
+
+nav li a:hover{
+    background: #0E1665;
+    background: -noz-linear-gredient(top,#04082E,#0E1665);
+    background: -webkit-linear-gredient(top,#04082E,#0E1665);
+    background: -webkit-gredient(linear,left top,left bottom,from(#04082E),to (#0E1665));
+    background: -linear-gredient(top,#04082E, #0E1665);
+}
+
+#nav li ul{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    
+}
+#nav li:hover > ul {
+    display: block;
+    
+}
+
+#nav li ul li a {
+    width: 42px;
+    display:block;
+}
